@@ -9,7 +9,7 @@ namespace TestAspNet3.data.mocks
 {
     public class MockProducts : IProducts
     {
-        private readonly ICategory categories = new MockCategory();
+        private readonly ICategories categories = new MockCategories();
 
         public IEnumerable<Product> products 
         {
@@ -50,10 +50,6 @@ namespace TestAspNet3.data.mocks
                         category = categories.AllCategories.Last()
                     },
                 };
-            }
-            set
-            {
-
             }
         }
         public IEnumerable<Product> productsFavorite { get; set; }

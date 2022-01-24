@@ -7,7 +7,7 @@ using TestAspNet3.data.models;
 
 namespace TestAspNet3.data.mocks
 {
-    public class MockCategory : ICategory
+    public class MockCategories : ICategories
     {
         public IEnumerable<Category> AllCategories
         {

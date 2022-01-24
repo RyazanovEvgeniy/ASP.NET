@@ -6,7 +6,7 @@ using TestAspNet3.data.models;
 
 namespace TestAspNet3.data.interfaces
 {
-    interface IProducts
+    public interface IProducts
     {
         IEnumerable<Product> products { get; }
         IEnumerable<Product> productsFavorite { get; set; }

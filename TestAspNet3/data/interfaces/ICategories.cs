@@ -6,7 +6,7 @@ using TestAspNet3.data.models;
 
 namespace TestAspNet3.data.interfaces
 {
-    interface ICategory
+    public interface ICategories
     {
         IEnumerable<Category> AllCategories { get; }
     }

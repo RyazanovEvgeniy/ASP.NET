@@ -14,7 +14,7 @@ namespace TestAspNet3.data.models
         public string img { set; get; }
         public ushort price { set; get; }
         public bool isFavorite { set; get; }
-        public int available { set; get; }
+        public bool available { set; get; }
         public int categoryId { set; get; }
         public virtual Category category { set; get; }
     }
