@@ -9,13 +9,13 @@ namespace TestAspNet3.data.models
     {
         public int id { set; get; }
         public string name { set; get; }
-        public string ShortDescription { set; get; }
-        public string LongDescription { set; get; }
+        public string shortDescription { set; get; }
+        public string longDescription { set; get; }
         public string img { set; get; }
         public ushort price { set; get; }
         public bool isFavorite { set; get; }
         public int available { set; get; }
         public int categoryId { set; get; }
-        public virtual Category Category { set; get; }
+        public virtual Category category { set; get; }
     }
 }
