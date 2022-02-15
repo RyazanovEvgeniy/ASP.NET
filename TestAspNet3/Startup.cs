@@ -19,6 +19,7 @@ namespace TestAspNet3
         {
             services.AddTransient<IProducts, MockProducts>();
             services.AddTransient<ICategories, MockCategories>();
+
             services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 

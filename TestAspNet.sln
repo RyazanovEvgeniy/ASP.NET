@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAspNet2", "TestAspNet2\TestAspNet2.csproj", "{C1E99713-51F7-435E-B2B6-D837D5E59617}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAspNet1", "TestAspNet1\TestAspNet1.csproj", "{FF298D19-6A98-4D7F-B416-1E814025BE75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAspNet1", "TestAspNet1\TestAspNet1.csproj", "{FF298D19-6A98-4D7F-B416-1E814025BE75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAspNet3", "TestAspNet3\TestAspNet3.csproj", "{F21BD7F6-4687-4AE7-8A20-7ED26713FB3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAspNet3", "TestAspNet3\TestAspNet3.csproj", "{F21BD7F6-4687-4AE7-8A20-7ED26713FB3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -18,8 +18,9 @@ namespace TestAspNet3.data.mocks
                 return new List<Product>
                 {
                     new Product 
-                    { 
+                    {
                         name = "Tesla", 
+                        img = "/img/tesla.jpg",
                         price = 45000, 
                         available = true, 
                         isFavorite = true, 
@@ -27,7 +28,8 @@ namespace TestAspNet3.data.mocks
                     },
                     new Product
                     {
-                        name = "Ford",
+                        name = "Bmw",
+                        img = "/img/bmw.jpg",
                         price = 35000,
                         available = false,
                         isFavorite = true,
@@ -36,6 +38,7 @@ namespace TestAspNet3.data.mocks
                     new Product
                     {
                         name = "Nissan",
+                        img = "/img/nissan.jpg",
                         price = 35000,
                         available = false,
                         isFavorite = false,
@@ -43,7 +46,8 @@ namespace TestAspNet3.data.mocks
                     },
                     new Product
                     {
-                        name = "Kia",
+                        name = "Mercedes",
+                        img = "/img/mercedes.jpg",
                         price = 15000,
                         available = true,
                         isFavorite = false,

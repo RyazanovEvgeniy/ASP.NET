@@ -1,27 +1,19 @@
-﻿@using TestAspNet3.data.models
-@model IEnumerable<Product>
+﻿@model CarsListViewModel
 
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ProductsView</title>
-</head>
-<body>
-    <h2>Все продукты</h2>
+<h2>Все продукты</h2>
+<h3>@Model.currentCategory</h3>
+<div class="row mt-5 mb-2">
     @{
-         foreach (var product in Model)
-         {
-             <div>
-                 <h2>Модель: @product.name</h2>
-                 <p>Цена: @product.price.ToString("c")</p>
-             </div>
-         }
+        foreach (var product in Model.allCars)
+        {
+        <div class="col-lg-4">
+            <h2>Модель: @product.name</h2>
+            <img class="img-thumbnail" src="@product.img" alt="@product.name" />
+            <p>@product.shortDescription</p>
+            <p>Цена: @product.price.ToString("c")</p>
+            <p><a class="btn btn-warning" href="#">Подробнее</a></p>
+        </div>
+
+        }
     }
-</body>
-</html>
+</div>

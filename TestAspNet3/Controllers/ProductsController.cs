@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TestAspNet3.data.interfaces;
+using TestAspNet3.ViewModels;
 
 namespace TestAspNet3.data.Controllers
 {
@@ -20,7 +21,13 @@ namespace TestAspNet3.data.Controllers
 
         public ViewResult ProductsView()
         {
-            return View(products.products);
+            ViewBag.Title = "ProductsView";
+
+            CarsListViewModel carsListViewModel = new CarsListViewModel();
+
+            carsListViewModel.allCars = products.products;
+            carsListViewModel.currentCategory = "Автомобили";
+            return View(carsListViewModel);
         }
     }
 }
