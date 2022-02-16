@@ -7,9 +7,9 @@ using TestAspNet3.data.models;
 
 namespace TestAspNet3.data
 {
-    public class DB : DbContext
+    public class DB : DbContext 
     {
-        public DB(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public DB(DbContextOptions<DB> options) : base(options)
         {
 
         }

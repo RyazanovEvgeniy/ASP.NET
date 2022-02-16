@@ -16,11 +16,8 @@ namespace TestAspNet3.data.Repository
 
         public IEnumerable<Product> products => db.product.Include(c => c.category);
 
-        public IEnumerable<Product> productsFavorite { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IEnumerable<Product> productsFavorite => db.product.Where(p => p.isFavorite).Include(c => c.category);
 
-        public Product productById(int productId)
-        {
-            throw new NotImplementedException();
-        }
+        public Product productById(int productId) => db.product.FirstOrDefault(p => p.id == productId);
     }
 }

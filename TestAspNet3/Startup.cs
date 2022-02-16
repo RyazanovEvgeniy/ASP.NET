@@ -44,6 +44,12 @@ namespace TestAspNet3
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                DB db = scope.ServiceProvider.GetRequiredService<DB>();
+                DbObjects.Initial(db);
+            }
         }
     }
 }

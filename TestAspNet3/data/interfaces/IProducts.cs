@@ -9,7 +9,7 @@ namespace TestAspNet3.data.interfaces
     public interface IProducts
     {
         IEnumerable<Product> products { get; }
-        IEnumerable<Product> productsFavorite { get; set; }
+        IEnumerable<Product> productsFavorite { get; }
         Product productById(int productId);
     }
 }
