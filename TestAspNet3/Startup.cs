@@ -14,6 +14,7 @@ using TestAspNet3.data;
 using TestAspNet3.data.interfaces;
 using TestAspNet3.data.mocks;
 using TestAspNet3.data.Repository;
+using TestAspNet3.Views.Shared;
 
 namespace TestAspNet3
 {
@@ -35,7 +36,14 @@ namespace TestAspNet3
             services.AddTransient<IProducts, ProductRepository>();
             services.AddTransient<ICategories, CategoryRepository>();
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddScoped(sp => Cart.GetCart(sp));
+
             services.AddMvc(option => option.EnableEndpointRouting = false);
+
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -43,6 +51,7 @@ namespace TestAspNet3
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
 
             using (var scope = app.ApplicationServices.CreateScope())

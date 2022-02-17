@@ -23,9 +23,9 @@ namespace TestAspNet3.data.Controllers
         {
             ViewBag.Title = "ProductsView";
 
-            CarsListViewModel carsListViewModel = new CarsListViewModel();
+            ProductsListViewModel carsListViewModel = new ProductsListViewModel();
 
-            carsListViewModel.allCars = products.products;
+            carsListViewModel.allProducts = products.products;
             carsListViewModel.currentCategory = "Автомобили";
             return View(carsListViewModel);
         }

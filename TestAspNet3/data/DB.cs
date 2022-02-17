@@ -16,6 +16,7 @@ namespace TestAspNet3.data
 
         public DbSet<Product> product { get; set; }
         public DbSet<Category> category { get; set; }
+        public DbSet<CartItem> cartItem { get; set; }
 
 
     }

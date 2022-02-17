@@ -6,9 +6,9 @@ using TestAspNet3.data.models;
 
 namespace TestAspNet3.ViewModels
 {
-    public class CarsListViewModel
+    public class ProductsListViewModel
     {
-        public IEnumerable<Product> allCars { get; set; }
+        public IEnumerable<Product> allProducts { get; set; }
         public string currentCategory { get; set; }
     }
 }
