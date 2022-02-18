@@ -6,9 +6,8 @@ using TestAspNet3.data.models;
 
 namespace TestAspNet3.ViewModels
 {
-    public class ProductsListViewModel
+    public class HomeViewModel
     {
-        public IEnumerable<Product> products { get; set; }
-        public string currentCategory { get; set; }
+        public IEnumerable<Product> favProducts { get; set; }
     }
 }

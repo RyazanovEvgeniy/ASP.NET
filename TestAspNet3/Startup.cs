@@ -52,7 +52,11 @@ namespace TestAspNet3
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(routes => {
+                routes.MapRoute(name: "default", template: "{controller=Home}/{action=index}/{id?}");
+                routes.MapRoute(name: "category", 
+                    template: "{controller=Products}/{action}/{category?}");
+            });
 
             using (var scope = app.ApplicationServices.CreateScope())
             {

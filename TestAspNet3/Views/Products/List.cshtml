@@ -1,10 +1,9 @@
 ﻿@model ProductsListViewModel
 
-<h2>Все продукты</h2>
-<h3>@Model.currentCategory</h3>
+<h2>@Model.currentCategory</h2>
 <div class="row mt-5 mb-2">
     @{
-        foreach (Product product in Model.allProducts)
+        foreach (Product product in Model.products)
             @Html.Partial("AllProducts", product);
     }
 </div>
