@@ -14,7 +14,7 @@ using TestAspNet3.data;
 using TestAspNet3.data.interfaces;
 using TestAspNet3.data.mocks;
 using TestAspNet3.data.Repository;
-using TestAspNet3.Views.Shared;
+using TestAspNet3.Views.models;
 
 namespace TestAspNet3
 {
@@ -35,6 +35,7 @@ namespace TestAspNet3
 
             services.AddTransient<IProducts, ProductRepository>();
             services.AddTransient<ICategories, CategoryRepository>();
+            services.AddTransient<IOrders, OrderRepository>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

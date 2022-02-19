@@ -29,8 +29,8 @@ namespace TestAspNet3.Migrations
                     b.Property<string>("itemCartId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("price")
-                        .HasColumnType("int");
+                    b.Property<long>("price")
+                        .HasColumnType("bigint");
 
                     b.Property<int?>("productid")
                         .HasColumnType("int");
@@ -58,6 +58,61 @@ namespace TestAspNet3.Migrations
                     b.HasKey("id");
 
                     b.ToTable("category");
+                });
+
+            modelBuilder.Entity("TestAspNet3.data.models.Order", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("dateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("surname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("order");
+                });
+
+            modelBuilder.Entity("TestAspNet3.data.models.OrderDetail", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("orderId")
+                        .HasColumnType("int");
+
+                    b.Property<long>("price")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("productId")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("orderId");
+
+                    b.HasIndex("productId");
+
+                    b.ToTable("orderDetail");
                 });
 
             modelBuilder.Entity("TestAspNet3.data.models.Product", b =>
@@ -103,6 +158,21 @@ namespace TestAspNet3.Migrations
                     b.HasOne("TestAspNet3.data.models.Product", "product")
                         .WithMany()
                         .HasForeignKey("productid");
+                });
+
+            modelBuilder.Entity("TestAspNet3.data.models.OrderDetail", b =>
+                {
+                    b.HasOne("TestAspNet3.data.models.Order", "order")
+                        .WithMany("orderDetails")
+                        .HasForeignKey("orderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TestAspNet3.data.models.Product", "product")
+                        .WithMany()
+                        .HasForeignKey("productId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TestAspNet3.data.models.Product", b =>

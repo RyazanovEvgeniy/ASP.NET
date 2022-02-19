@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using TestAspNet3.data;
 using TestAspNet3.data.models;
 
-namespace TestAspNet3.Views.Shared
+namespace TestAspNet3.Views.models
 {
     public class Cart
     {

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using TestAspNet3.data.interfaces;
 using TestAspNet3.ViewModels;
-using TestAspNet3.Views.Shared;
 
 namespace TestAspNet3.Controllers
 {

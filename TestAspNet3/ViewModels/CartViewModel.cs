@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TestAspNet3.Views.Shared;
+using TestAspNet3.Views.models;
 
 namespace TestAspNet3.ViewModels
 {

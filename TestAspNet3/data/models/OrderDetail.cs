@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace TestAspNet3.data.models
 {
-    public class CartItem
+    public class OrderDetail
     {
         public int id { get; set; }
-        public Product product { get; set; }
+        public int orderId { get; set; }
+        public int productId { get; set; }
         public uint price { get; set; }
-        public string itemCartId { get; set; }
-
+        public virtual Product product { get; set; }
+        public virtual Order order { get; set; }
     }
 }

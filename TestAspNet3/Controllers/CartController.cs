@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TestAspNet3.data.interfaces;
 using TestAspNet3.data.Repository;
 using TestAspNet3.ViewModels;
-using TestAspNet3.Views.Shared;
+using TestAspNet3.Views.models;
 
 namespace TestAspNet3.Controllers
 {
@@ -31,7 +31,7 @@ namespace TestAspNet3.Controllers
             return View(obj);
         }
 
-        public RedirectToActionResult addToCart(int id)
+        public RedirectToActionResult AddToCart(int id)
         {
             var item = products.products.FirstOrDefault(i => i.id == id);
 
